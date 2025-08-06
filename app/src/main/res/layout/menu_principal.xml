@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,10 +14,11 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:text="TECNITOOLS"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
         <GridLayout
             android:layout_width="match_parent"
@@ -66,13 +67,13 @@
                     android:layout_height="76dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    app:srcCompat="@android:drawable/ic_menu_call" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:text="Administrar Clientes" />
+                    android:text="Administrar Proveedores" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -89,13 +90,13 @@
                     android:layout_height="76dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    app:srcCompat="@android:drawable/ic_menu_manage" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:text="Administrar Clientes" />
+                    android:text="Administrar Técnicos" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -112,13 +113,13 @@
                     android:layout_height="76dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:text="Administrar Clientes" />
+                    android:text="Administrar Servicios" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -135,13 +136,13 @@
                     android:layout_height="76dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    app:srcCompat="@android:drawable/ic_menu_today" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:text="Administrar Clientes" />
+                    android:text="Generar Orden de Servicios" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -158,13 +159,13 @@
                     android:layout_height="76dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    app:srcCompat="@android:drawable/ic_menu_directions" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:text="Administrar Clientes" />
+                    android:text="Generar Facturas a Empresa" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -181,13 +182,13 @@
                     android:layout_height="76dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    app:srcCompat="@android:drawable/ic_search_category_default" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:text="Administrar Clientes" />
+                    android:text="Reporte Ingresos por Servicio" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -204,14 +205,15 @@
                     android:layout_height="76dp"
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|top"
-                    android:text="Administrar Clientes" />
+                    android:text="Reporte Atenciones por Técnico" />
             </LinearLayout>
+
         </GridLayout>
 
         <Button
