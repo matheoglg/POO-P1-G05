@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
+import espol.poo.proyectopoog5.appServicio.Servicio_main;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, ClientesActivity.class);
             Log.d("App","Al dar click en botón Administrar Clientes");
             this.startActivity(intent);
+        });
+
+        ImageButton btn_opcion4 = findViewById(R.id.btnAdministrarServicios);
+        btn_opcion4.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Servicio_main.class);
+            startActivity(intent);
         });
     }
 }
