@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ProyectoPOOG5</string>
+    <string-array name="tipos_cliente">
+        <item>Seleccione</item>
+        <item>Personal</item>
+        <item>Empresarial</item>
+    </string-array>
 </resources>

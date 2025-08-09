@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import espol.poo.proyectopoog5.R;
@@ -40,10 +41,15 @@ public class ClientesActivity extends AppCompatActivity { //Extiende de AppCompa
         Button btn_AgregarCliente = findViewById(R.id.btnAgregarCliente);
 
         btn_AgregarCliente.setOnClickListener( v -> {
-            Intent intent = new Intent(this, ClientesActivity.class);
-            Log.d("App","Al dar click en botón Administrar Clientes");
+            Intent intent = new Intent(this, AgregarCliente.class);
+            Log.d("TecniTools","Al dar click en botón Agregar Cliente");
             this.startActivity(intent);
         });
+
+        Button btn_Volver = findViewById(R.id.btnVolverC);
+        btn_Volver.setOnClickListener(v -> finish());
+
+
     }
 
     private void llenarLista() {
@@ -52,7 +58,7 @@ public class ClientesActivity extends AppCompatActivity { //Extiende de AppCompa
         // Configurar el adaptador
         ArrayList<Cliente> listaClientes = new ArrayList<>();
         try{
-            listaClientes = Cliente.cargarEmpleados(this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS));
+            listaClientes = Cliente.cargarClientes(this);
             Log.d("TecniTools","Datos leidos desde el archivo");
         }catch (Exception e){
             listaClientes = Cliente.obtenerClientes();
@@ -68,7 +74,7 @@ public class ClientesActivity extends AppCompatActivity { //Extiende de AppCompa
     private void cargarDatos() {
         boolean guardado = false;
         try{
-            guardado = Cliente.crearDatosIniciales(this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS));
+            guardado = Cliente.crearDatosIniciales(this);
 
         }catch (Exception e){
             guardado = false;

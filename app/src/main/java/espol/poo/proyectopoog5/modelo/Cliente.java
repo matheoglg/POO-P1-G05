@@ -1,5 +1,7 @@
 package espol.poo.proyectopoog5.modelo;
 
+import android.content.Context;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -54,16 +56,6 @@ public class Cliente extends Persona {
         Cliente c3 = new Cliente("0919212831", "Carlos Mina", "099555666", "Cuenca", "Personal");
         Cliente c4 = new Cliente("0919292131", "Julia Herrera", "099777888", "Manta", "Empresarial");
 
-        Vehiculo v1 = new Vehiculo("ABC123", "Automóvil");
-        Vehiculo v2 = new Vehiculo("XYZ789", "Motocicleta");
-        Vehiculo v3 = new Vehiculo("MNO456", "Bus");
-        Vehiculo v4 = new Vehiculo("JKL321", "Bus");
-
-        c1.agregarVehiculo(v1);
-        c2.agregarVehiculo(v2);
-        c3.agregarVehiculo(v3);
-        c4.agregarVehiculo(v4);
-
         lista.add(c1);
         lista.add(c2);
         lista.add(c3);
@@ -72,9 +64,9 @@ public class Cliente extends Persona {
         return lista;
     }
 
-    public static ArrayList<Cliente> cargarEmpleados(File directorio){
+    public static ArrayList<Cliente> cargarClientes(Context context){
         ArrayList<Cliente> lista = new ArrayList<>();
-        File f = new File(directorio, nomArchivoCliente);
+        File f = new File(context.getFilesDir(), nomArchivoCliente);
         //se escribe la lista serializada
         if ( f.exists()) { //si no existe se crea la lista
             try (ObjectInputStream is = new ObjectInputStream(new FileInputStream(f))) {
@@ -87,7 +79,7 @@ public class Cliente extends Persona {
         }
         return lista;
     }
-    public static boolean crearDatosIniciales(File directorio) throws Exception{
+    public static boolean crearDatosIniciales(Context context) throws Exception{
         ArrayList<Cliente> lista = new ArrayList<>();
         boolean guardado = false;
         Cliente c1 = new Cliente("0919292831", "Luis Pérez", "099111222", "Guayaquil", "Personal");
@@ -95,17 +87,12 @@ public class Cliente extends Persona {
         Cliente c3 = new Cliente("0919212831", "Carlos Mina", "099555666", "Cuenca", "Personal");
         Cliente c4 = new Cliente("0919292131", "Julia Herrera", "099777888", "Manta", "Empresarial");
 
-        Vehiculo v1 = new Vehiculo("ABC123", "Automóvil");
-        Vehiculo v2 = new Vehiculo("XYZ789", "Motocicleta");
-        Vehiculo v3 = new Vehiculo("MNO456", "Bus");
-        Vehiculo v4 = new Vehiculo("JKL321", "Bus");
+        lista.add(c1);
+        lista.add(c2);
+        lista.add(c3);
+        lista.add(c4);
 
-        c1.agregarVehiculo(v1);
-        c2.agregarVehiculo(v2);
-        c3.agregarVehiculo(v3);
-        c4.agregarVehiculo(v4);
-
-        File f = new File(directorio, nomArchivoCliente);
+        File f = new File(context.getFilesDir(), nomArchivoCliente);
         if (! f.exists()) {
             try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(f))) {
                 os.writeObject(lista);
@@ -118,9 +105,9 @@ public class Cliente extends Persona {
         return guardado;
     }
 
-    public static boolean guardarLista(File directorio,ArrayList<Cliente> lista) throws Exception{
+    public static boolean guardarLista(Context context,ArrayList<Cliente> lista) throws Exception{
         boolean guardado = false;
-        File f = new File(directorio, nomArchivoCliente);
+        File f = new File(context.getFilesDir(), nomArchivoCliente);
         try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(f))) {
             os.writeObject(lista);
             guardado = true;
