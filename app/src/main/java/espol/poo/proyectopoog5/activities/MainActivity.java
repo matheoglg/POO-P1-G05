@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
             this.startActivity(intent);
         });
 
-        ImageButton btn_opcion4 = findViewById(R.id.btnAdministrarServicios);
-        btn_opcion4.setOnClickListener(v -> {
+        btn_AdministrarServicios.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, Servicio_main.class);
-            startActivity(intent);
+            Log.d("App","Al dar click en botón Administrar Servicios");
+            this.startActivity(intent);
         });
     }
 }
