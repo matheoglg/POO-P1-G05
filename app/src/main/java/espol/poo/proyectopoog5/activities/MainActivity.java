@@ -1,7 +1,10 @@
 package espol.poo.proyectopoog5.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import espol.poo.proyectopoog5.R;
+import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,9 +29,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button btn_salir = findViewById(R.id.btnSalir);
+        ImageButton btn_AdministrarClientes = findViewById(R.id.btnAdministrarClientes);
+        ImageButton btn_AdministrarProveedores = findViewById(R.id.btnAdministrarProveedores);
+        ImageButton btn_AdministrarTecnicos = findViewById(R.id.btnAdministrarTecnicos);
+        ImageButton btn_AdministrarServicios = findViewById(R.id.btnAdministrarServicios);
+        ImageButton btn_GenerarOrden = findViewById(R.id.btnGenerarOrden);
+        ImageButton btn_GenerarFactura = findViewById(R.id.btnGenerarFactura);
+        ImageButton btn_ReporteServicios = findViewById(R.id.btnReporteServicios);
+        ImageButton btn_ReporteTecnicos = findViewById(R.id.btnReporteTecnicos);
 
         btn_salir.setOnClickListener(v -> {
             finishAffinity(); // Cierra la app completamente
+        });
+
+        btn_AdministrarClientes.setOnClickListener( v -> {
+            Intent intent = new Intent(this, ClientesActivity.class);
+            Log.d("App","Al dar click en botón Administrar Clientes");
+            this.startActivity(intent);
         });
     }
 }
