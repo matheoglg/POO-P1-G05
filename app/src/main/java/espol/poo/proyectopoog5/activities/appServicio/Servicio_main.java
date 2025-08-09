@@ -1,10 +1,9 @@
-package espol.poo.proyectopoog5.appServicio;
+package espol.poo.proyectopoog5.activities.appServicio;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;

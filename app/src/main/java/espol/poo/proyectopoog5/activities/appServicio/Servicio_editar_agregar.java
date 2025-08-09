@@ -1,4 +1,4 @@
-package espol.poo.proyectopoog5.appServicio;
+package espol.poo.proyectopoog5.activities.appServicio;
 
 import android.content.Intent;
 import android.os.Bundle;
