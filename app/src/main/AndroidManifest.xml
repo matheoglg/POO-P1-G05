@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoPOOG5">
         <activity
-            android:name=".appServicio.Servicio_editar_agregar"
+            android:name=".activities.appServicio.Servicio_editar_agregar"
             android:exported="false" />
         <activity
-            android:name=".appServicio.Servicio_main"
+            android:name=".activities.appServicio.Servicio_main"
             android:exported="false" />
         <activity
             android:name=".appServicio.item_servicio"

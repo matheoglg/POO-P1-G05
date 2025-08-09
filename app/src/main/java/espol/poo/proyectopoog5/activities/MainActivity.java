@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
-import espol.poo.proyectopoog5.appServicio.Servicio_main;
+import espol.poo.proyectopoog5.activities.appServicio.Servicio_main;
 
 public class MainActivity extends AppCompatActivity {
 
