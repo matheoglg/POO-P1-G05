@@ -1,7 +1,9 @@
 package espol.poo.proyectopoog5.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import espol.poo.proyectopoog5.R;
+import espol.poo.proyectopoog5.appServicio.Servicio_main;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
         btn_salir.setOnClickListener(v -> {
             finishAffinity(); // Cierra la app completamente
+        });
+
+        ImageButton btn_opcion4 = findViewById(R.id.btnAdministrarServicios);
+        btn_opcion4.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Servicio_main.class);
+            startActivity(intent);
         });
     }
 }
