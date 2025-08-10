@@ -1,4 +1,4 @@
-package espol.poo.proyectopoog5.activities.activitiesCliente;
+package espol.poo.proyectopoog5.activities.activitiesProveedor;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,16 +16,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import espol.poo.proyectopoog5.R;
-import espol.poo.proyectopoog5.modelo.Cliente;
+import espol.poo.proyectopoog5.modelo.Proveedor;
 
-public class ClientesActivity extends AppCompatActivity { //Extiende de AppCompatActivity para sobreescribir métodos como onCreate
+public class ProveedorActivity extends AppCompatActivity { //Extiende de AppCompatActivity para sobreescribir métodos como onCreate
     private RecyclerView recyclerView;
-    private ClienteAdapter clienteAdapter;
+    private ProveedorAdapter proveedorAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.lista_clientes_activity);
+        setContentView(R.layout.lista_proveedores_activity);
         cargarDatos();
 
         Log.d("TecniTools","en onCreate");
@@ -35,43 +35,43 @@ public class ClientesActivity extends AppCompatActivity { //Extiende de AppCompa
             return insets;
         });
 
-        Button btn_AgregarCliente = findViewById(R.id.btnAgregarCliente);
+        Button btn_AgregarProveedor = findViewById(R.id.btnAgregarProveedor);
 
-        btn_AgregarCliente.setOnClickListener( v -> {
-            Intent intent = new Intent(this, AgregarCliente.class);
+        btn_AgregarProveedor.setOnClickListener( v -> {
+            Intent intent = new Intent(this, AgregarProveedor.class);
             Log.d("TecniTools","Al dar click en botón Agregar Cliente");
             this.startActivity(intent);
         });
 
-        Button btn_Volver = findViewById(R.id.btnVolverC);
+        Button btn_Volver = findViewById(R.id.btnVolverP);
         btn_Volver.setOnClickListener(v -> finish());
 
 
     }
 
     private void llenarLista() {
-        recyclerView = findViewById(R.id.recyclerViewClientes);
+        recyclerView = findViewById(R.id.recyclerViewProveedores);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // Configurar el adaptador
-        ArrayList<Cliente> listaClientes = new ArrayList<>();
+        ArrayList<Proveedor> listaProveedores = new ArrayList<>();
         try{
-            listaClientes = Cliente.cargarClientes(this);
+            listaProveedores = Proveedor.cargarProveedores(this);
             Log.d("TecniTools","Datos leidos desde el archivo");
         }catch (Exception e){
-            listaClientes = Cliente.obtenerClientes();
+            listaProveedores = Proveedor.obtenerProveedores();
             Log.d("TecniTools", "Error al cargar datos"+e.getMessage());
         }
 
-        Log.d("TecniTools", listaClientes.toString());//muestra la lista en el log
+        Log.d("TecniTools", listaProveedores.toString());//muestra la lista en el log
 
-        clienteAdapter = new ClienteAdapter(listaClientes,this);
-        recyclerView.setAdapter(clienteAdapter);
+        proveedorAdapter = new ProveedorAdapter(listaProveedores,this);
+        recyclerView.setAdapter(proveedorAdapter);
     }
 
     private void cargarDatos() {
         boolean guardado = false;
         try{
-            guardado = Cliente.crearDatosIniciales(this);
+            guardado = Proveedor.crearDatosIniciales(this);
 
         }catch (Exception e){
             guardado = false;
@@ -79,7 +79,6 @@ public class ClientesActivity extends AppCompatActivity { //Extiende de AppCompa
         }
         if (guardado) {
             Log.d("TecniTools", "DATOS INICIALES GUARDADOS");
-            //LEER LOS DATOS
         }
     }
 

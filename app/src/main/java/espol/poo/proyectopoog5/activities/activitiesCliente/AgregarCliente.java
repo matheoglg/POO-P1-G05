@@ -56,10 +56,9 @@ public class AgregarCliente extends AppCompatActivity {
         });
     }
     public void guardar(View view) {
-        // Validación de la selección del Spinner
-        if (spnTipoCliente.getSelectedItemPosition() == 0) {
+        if (spnTipoCliente.getSelectedItemPosition() == 0) { // Validación de la selección del Spinner para el tipo de Cliente
             Toast.makeText(this, "Por favor, seleccione un tipo de cliente", Toast.LENGTH_SHORT).show();
-            return; // Detiene la ejecución si no se ha seleccionado nada
+            return;                                         // Detiene la ejecución si no se ha seleccionado nada
         }
 
         String identificacion = etIdCliente.getText().toString();
@@ -74,22 +73,15 @@ public class AgregarCliente extends AppCompatActivity {
             return;
         }
 
-        // Crear el objeto Cliente con los datos recogidos del formulario
         Cliente nuevoCliente = new Cliente(identificacion, nombre, direccion, telefono, tipoClienteString);
 
         Log.d("AppClientes", nuevoCliente.toString());
 
-        // Lógica para guardar el cliente en un archivo
         ArrayList<Cliente> lista = new ArrayList<>();
         try {
-            // Suponiendo que tienes un método similar a Empleado.cargarEmpleados
-            // que ahora carga clientes
             lista = Cliente.cargarClientes(this);
             lista.add(nuevoCliente);
             Log.d("AppClientes", "Cliente actualizado en lista");
-
-            // Guardar la lista actualizada en el archivo
-            // Suponiendo que tienes un método similar a Empleado.guardarLista
             Cliente.guardarLista(this, lista);
             Toast.makeText(getApplicationContext(), "Cliente guardado exitosamente", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
