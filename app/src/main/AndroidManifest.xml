@@ -30,6 +30,12 @@
             android:name=".activities.activitiesProveedor.ProveedorActivity"
             android:exported="false" />
         <activity
+            android:name=".activities.activitiesTecnico.TecnicoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activitiesTecnico.AgregarTecnico"
+            android:exported="false" />
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>

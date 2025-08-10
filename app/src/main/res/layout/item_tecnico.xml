@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Identificación: "
+                android:textColor="#63C243"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvIdTecnico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0968081539"
+                android:textColor="#63C243"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Técnico: "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNombreTecnico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pepe Aguilar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teléfono: "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTelfTecnico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0943046136" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Especialidad: "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEspecialidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electricidad Automotriz" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnEliminarTecnico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FF4242"
+            android:text="Eliminar"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

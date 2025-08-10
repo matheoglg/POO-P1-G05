@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
 import espol.poo.proyectopoog5.activities.activitiesProveedor.ProveedorActivity;
+import espol.poo.proyectopoog5.activities.activitiesTecnico.TecnicoActivity;
 import espol.poo.proyectopoog5.activities.appServicio.Servicio_main;
 
 public class MainActivity extends AppCompatActivity {
@@ -51,8 +52,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btn_AdministrarProveedores.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ProveedorActivity.class);
+            Intent intent = new Intent(this, ProveedorActivity.class);
             Log.d("App","Al dar click en botón Administrar Proveedores");
+            this.startActivity(intent);
+        });
+
+        btn_AdministrarTecnicos.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TecnicoActivity.class);
+            Log.d("App","Al dar click en botón Administrar Tecnicos");
             this.startActivity(intent);
         });
 
