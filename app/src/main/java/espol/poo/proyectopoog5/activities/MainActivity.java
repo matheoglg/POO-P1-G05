@@ -16,7 +16,7 @@ import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
 import espol.poo.proyectopoog5.activities.activitiesProveedor.ProveedorActivity;
 import espol.poo.proyectopoog5.activities.activitiesTecnico.TecnicoActivity;
-import espol.poo.proyectopoog5.activities.appServicio.Servicio_main;
+import espol.poo.proyectopoog5.activities.activitiesServicio.ServicioActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btn_AdministrarServicios.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, Servicio_main.class);
+            Intent intent = new Intent(MainActivity.this, ServicioActivity.class);
             Log.d("App","Al dar click en botón Administrar Servicios");
             this.startActivity(intent);
         });
