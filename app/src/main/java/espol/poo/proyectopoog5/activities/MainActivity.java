@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
+import espol.poo.proyectopoog5.activities.activitiesOrdenServicio.OrdenServicioActivity;
 import espol.poo.proyectopoog5.activities.activitiesProveedor.ProveedorActivity;
 import espol.poo.proyectopoog5.activities.activitiesTecnico.TecnicoActivity;
 import espol.poo.proyectopoog5.activities.activitiesServicio.ServicioActivity;
@@ -66,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
         btn_AdministrarServicios.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ServicioActivity.class);
             Log.d("App","Al dar click en botón Administrar Servicios");
+            this.startActivity(intent);
+        });
+
+        btn_GenerarOrden.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, OrdenServicioActivity.class);
+            Log.d("App","Al dar click en botón Generar Orden de Servicio");
             this.startActivity(intent);
         });
 
