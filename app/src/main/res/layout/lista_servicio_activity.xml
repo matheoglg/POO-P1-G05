@@ -36,8 +36,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvServicios"
-        android:layout_width="390dp"
-        android:layout_height="599dp"
+        android:layout_width="388dp"
+        android:layout_height="589dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
