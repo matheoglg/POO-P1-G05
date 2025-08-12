@@ -1,8 +1,13 @@
 package espol.poo.proyectopoog5.modelo;
 
-public class Vehiculo {
+import java.io.Serializable;
+
+public class Vehiculo implements Serializable {
     private String numPlaca;
     private VehiculoTipo tipoVehiculo;
+
+    private static final long serialVersionUID = 1L;
+
     public Vehiculo(){
     }
     public Vehiculo(String placa, String tipoVehiculo){
