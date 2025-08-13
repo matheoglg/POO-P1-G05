@@ -16,6 +16,8 @@ import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
 import espol.poo.proyectopoog5.activities.activitiesOrdenServicio.OrdenServicioActivity;
 import espol.poo.proyectopoog5.activities.activitiesProveedor.ProveedorActivity;
+import espol.poo.proyectopoog5.activities.activitiesReportes.ReporteIngresosPorServicioActivity;
+import espol.poo.proyectopoog5.activities.activitiesReportes.ReporteIngresosPorTecnicoActivity;
 import espol.poo.proyectopoog5.activities.activitiesTecnico.TecnicoActivity;
 import espol.poo.proyectopoog5.activities.activitiesServicio.ServicioActivity;
 
@@ -76,6 +78,16 @@ public class MainActivity extends AppCompatActivity {
             this.startActivity(intent);
         });
 
+        btn_ReporteServicios.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ReporteIngresosPorServicioActivity.class);
+            Log.d("App","Al dar click en botón Reporte Ingresos por Servicio");
+            this.startActivity(intent);
+        });
 
+        btn_ReporteTecnicos.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ReporteIngresosPorTecnicoActivity.class);
+            Log.d("App","Al dar click en botón Reporte de Atención por Técnico");
+            this.startActivity(intent);
+        });
     }
 }
