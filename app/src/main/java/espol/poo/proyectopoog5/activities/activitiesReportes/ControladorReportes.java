@@ -21,8 +21,6 @@ public class ControladorReportes extends AppCompatActivity {
 
         for (OrdenServicio orden : ordenes) {
             String fecha = orden.getFecha();  // formato dd-mm-yyyy
-
-            // Suponiendo formato dd-mm-yyyy, extraemos mes y año
             String[] partes = fecha.split("-");
             if (partes.length == 3) {
                 String mesOrden = partes[1];

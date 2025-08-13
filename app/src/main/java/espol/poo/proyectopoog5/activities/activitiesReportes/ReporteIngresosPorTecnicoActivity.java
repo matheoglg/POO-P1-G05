@@ -23,6 +23,8 @@ public class ReporteIngresosPorTecnicoActivity extends AppCompatActivity {
     private Button btnConsultar;
     private RecyclerView rvResultados;
     private ControladorReportes controlador;
+    private Button btnVolver3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +52,11 @@ public class ReporteIngresosPorTecnicoActivity extends AppCompatActivity {
         spinnerMes = findViewById(R.id.spinnerMes);
         btnConsultar = findViewById(R.id.btnConsultar);
         rvResultados = findViewById(R.id.rvResultados);
+        btnVolver3 = findViewById(R.id.btnVolver3);
         rvResultados.setLayoutManager(new LinearLayoutManager(this));
-
+        btnVolver3.setOnClickListener(v -> {
+            finish();
+        });
         controlador = new ControladorReportes();
 
         btnConsultar.setOnClickListener(v -> {

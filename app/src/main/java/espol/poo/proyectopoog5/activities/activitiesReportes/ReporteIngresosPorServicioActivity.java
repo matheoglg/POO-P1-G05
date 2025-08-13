@@ -21,6 +21,8 @@ public class ReporteIngresosPorServicioActivity extends AppCompatActivity {
     private Button btnConsultar2;
     private RecyclerView rvResultados2;
     private ControladorReportes controlador2;
+    private Button btnVolver2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,10 @@ public class ReporteIngresosPorServicioActivity extends AppCompatActivity {
         btnConsultar2 = findViewById(R.id.btnConsultar2);
         rvResultados2 = findViewById(R.id.rvResultados);
         rvResultados2.setLayoutManager(new LinearLayoutManager(this));
-
+        btnVolver2 = findViewById(R.id.btnVolver2);
+        btnVolver2.setOnClickListener(v -> {
+            finish();
+        });
         controlador2 = new ControladorReportes();
 
         btnConsultar2.setOnClickListener(v -> {
