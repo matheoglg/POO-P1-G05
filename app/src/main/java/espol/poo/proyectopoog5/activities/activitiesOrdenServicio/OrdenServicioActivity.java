@@ -37,7 +37,7 @@ public class OrdenServicioActivity extends AppCompatActivity {
         recyclerView1 = findViewById(R.id.rvOrdenServicio);
         recyclerView1.setLayoutManager(new LinearLayoutManager(this));
         listaOrdenes = OrdenServicio.cargarOrdenes(this);
-        ordenAdapter = new OrdenServicioAdapter(listaOrdenes, this);
+
         recyclerView1.setAdapter(ordenAdapter);
     }
 

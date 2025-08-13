@@ -105,4 +105,37 @@ public class OrdenServicio implements Serializable {
             e.printStackTrace();
         }
     }
+    public static ArrayList<String> generarReportePorServicio(Context context, int mes, int anio) {
+        ArrayList<OrdenServicio> ordenes = cargarOrdenes(context);
+        ArrayList<String> reporte = new ArrayList<>();
+
+        // Mapa para acumular totales por nombre de servicio
+        java.util.Map<String, Double> totalesPorServicio = new java.util.HashMap<>();
+
+        for (OrdenServicio orden : ordenes) {
+            try {
+                String[] partesFecha = orden.getFecha().split("-");
+                int mesOrden = Integer.parseInt(partesFecha[1]);
+                int anioOrden = Integer.parseInt(partesFecha[2]);
+
+                if (mesOrden == mes && anioOrden == anio) {
+                    for (DetalleServicioOS detalle : orden.getListaServicios()) {
+                        String nombreServicio = detalle.getServicio().getNombreServ();
+                        double subtotal = detalle.getSubtotal();
+                        totalesPorServicio.put(nombreServicio,
+                                totalesPorServicio.getOrDefault(nombreServicio, 0.0) + subtotal);
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Convertir a lista para mostrar en RecyclerView o ListView
+        for (String servicio : totalesPorServicio.keySet()) {
+            double total = totalesPorServicio.get(servicio);
+            reporte.add(servicio + " - Total: $" + total);
+        }
+        return reporte;
+    }
 }
