@@ -48,6 +48,15 @@
             android:name=".activities.activitiesTecnico.AgregarTecnico"
             android:exported="false" />
         <activity
+            android:name=".activities.activitiesReportes.ControladorReportes"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activitiesReportes.ReporteIngresosPorServicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activitiesReportes.ReporteIngresosPorTecnicoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>

@@ -2,6 +2,8 @@ package espol.poo.proyectopoog5.activities.activitiesReportes;
 
 import android.content.Context;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +14,7 @@ import espol.poo.proyectopoog5.modelo.OrdenServicio;
 import espol.poo.proyectopoog5.modelo.ReporteTecnico;
 import espol.poo.proyectopoog5.modelo.Tecnico;
 
-public class ControladorReportes {
+public class ControladorReportes extends AppCompatActivity {
     public List<espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio> obtenerIngresosPorServicio(Context context, String anio, String mes) {
         ArrayList<OrdenServicio> ordenes = OrdenServicio.cargarOrdenes(context);
         Map<String, Double> acumulado = new HashMap<>();
