@@ -24,6 +24,11 @@ public class Tecnico extends Persona {
     public void setEspTecnico(String espTecnico) { this.espTecnico = espTecnico; }
 
     @Override
+    public String getNombrePersona() {
+        return super.getNombrePersona();
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
