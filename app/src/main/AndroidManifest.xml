@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoPOOG5">
         <activity
+            android:name=".activities.activitiesFactura.AgregarFactura"
+            android:exported="false" />
+        <activity
+            android:name=".activities.activitiesFactura.FacturaActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.activitiesOrdenServicio.DetalleOrdenServicioActivity"
             android:exported="false" />
         <activity
