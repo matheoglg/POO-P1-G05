@@ -42,7 +42,6 @@ public class OrdenServicioActivity extends AppCompatActivity {
         recyclerView1.setLayoutManager(new LinearLayoutManager(this));
         listaOrdenes = OrdenServicio.cargarOrdenes(this);
 
-//<<<<<<< HEAD
         // Ordenar por fecha más reciente primero
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             listaOrdenes.sort((o1, o2) -> {
@@ -55,8 +54,7 @@ public class OrdenServicioActivity extends AppCompatActivity {
 
 
         ordenAdapter = new OrdenServicioAdapter(listaOrdenes, this);
-//=======
-//>>>>>>> 761e6ec0ddc08315dc22927798b09c247476755d
+
         recyclerView1.setAdapter(ordenAdapter);
     }
 

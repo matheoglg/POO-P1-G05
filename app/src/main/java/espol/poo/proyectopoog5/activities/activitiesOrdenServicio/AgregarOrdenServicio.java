@@ -8,6 +8,7 @@ ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -106,7 +107,7 @@ public class AgregarOrdenServicio extends AppCompatActivity {
         spTecnico.setAdapter(adapterTecnicos);
     }
 
-    private void agregarServicioTemporal() {
+   /* private void agregarServicioTemporal() {
         if (etCantidad.getText().toString().trim().isEmpty()) {
             Toast.makeText(this, "Ingrese cantidad", Toast.LENGTH_SHORT).show();
             return;
@@ -119,7 +120,57 @@ public class AgregarOrdenServicio extends AppCompatActivity {
         listaDetallesTemp.add(detalle);
         recalcularTotal();
         adapterDetalles.notifyDataSetChanged();
+    }*/
+
+    private void agregarServicioTemporal() {
+        // Verificar que haya servicios y técnicos cargados
+        if (listaServicios == null || listaServicios.isEmpty()) {
+            Toast.makeText(this, "No hay servicios disponibles", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (listaTecnicos == null || listaTecnicos.isEmpty()) {
+            Toast.makeText(this, "No hay técnicos disponibles", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Verificar que se haya seleccionado un  servicio y técnico
+        if (spServicio.getSelectedItemPosition() == AdapterView.INVALID_POSITION) {
+            Toast.makeText(this, "Seleccione un servicio", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (spTecnico.getSelectedItemPosition() == AdapterView.INVALID_POSITION) {
+            Toast.makeText(this, "Seleccione un técnico", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Verificar cantidad válida
+        String cantidadStr = etCantidad.getText().toString().trim();
+        if (cantidadStr.isEmpty()) {
+            Toast.makeText(this, "Ingrese una cantidad", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        int cantidad;
+        try {
+            cantidad = Integer.parseInt(cantidadStr);
+            if (cantidad <= 0) {
+                Toast.makeText(this, "Cantidad inválida", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Cantidad inválida", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Si pasa todas las validaciones, agregar
+        Servicio servSel = listaServicios.get(spServicio.getSelectedItemPosition());
+        Tecnico tecSel = listaTecnicos.get(spTecnico.getSelectedItemPosition());
+
+        DetalleServicioOS detalle = new DetalleServicioOS(servSel, cantidad, tecSel);
+        listaDetallesTemp.add(detalle);
+        recalcularTotal();
+        adapterDetalles.notifyDataSetChanged();
     }
+
 
     private void recalcularTotal() {
         totalActual = listaDetallesTemp.stream().mapToDouble(DetalleServicioOS::getSubtotal).sum();
