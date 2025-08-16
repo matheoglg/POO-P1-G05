@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.activities.activitiesCliente.ClientesActivity;
+import espol.poo.proyectopoog5.activities.activitiesFactura.FacturaActivity;
 import espol.poo.proyectopoog5.activities.activitiesOrdenServicio.OrdenServicioActivity;
 import espol.poo.proyectopoog5.activities.activitiesProveedor.ProveedorActivity;
 import espol.poo.proyectopoog5.activities.activitiesReportes.ReporteIngresosPorServicioActivity;
@@ -89,5 +90,12 @@ public class MainActivity extends AppCompatActivity {
             Log.d("App","Al dar click en botón Reporte de Atención por Técnico");
             this.startActivity(intent);
         });
+
+        btn_GenerarFactura.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FacturaActivity.class);
+            Log.d("App","Al dar click en botón Generar Factura");
+            this.startActivity(intent);
+        });
+
     }
 }
