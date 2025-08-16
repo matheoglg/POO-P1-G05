@@ -1,11 +1,5 @@
 package espol.poo.proyectopoog5.activities.activitiesOrdenServicio;
-/*
-ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-        Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-        v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-        return insets;
-*/
-import android.os.Build;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.AdapterView;
@@ -18,7 +12,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import espol.poo.proyectopoog5.R;
 import espol.poo.proyectopoog5.modelo.Cliente;
@@ -190,6 +183,11 @@ public class AgregarOrdenServicio extends AppCompatActivity {
             Log.w("AgregarOrdenServicio", "No se guardó: placa o fecha vacías.");
             return;
         }
+        if (!etFecha.getText().toString().trim().matches("\\d{2}-\\d{2}-\\d{4}")) {
+            Toast.makeText(this, "Fecha inválida (use dd-MM-yyyy)", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         try {
             Cliente clienteSel = listaClientes.get(spCliente.getSelectedItemPosition());

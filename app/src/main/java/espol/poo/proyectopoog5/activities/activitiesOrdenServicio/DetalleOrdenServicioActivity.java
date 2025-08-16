@@ -18,7 +18,7 @@ import espol.poo.proyectopoog5.modelo.OrdenServicio;
 
 public class DetalleOrdenServicioActivity extends AppCompatActivity {
 
-    private TextView tvDatosCliente, tvTotal, tvTipoVehiculo, tvPlaca;
+    private TextView  tvTotal, tvTipoVehiculo, tvPlaca;
     private RecyclerView rvServicios;
     private ArrayList<OrdenServicio> listaOrdenes;
     private int posicion;
@@ -43,7 +43,6 @@ public class DetalleOrdenServicioActivity extends AppCompatActivity {
         if (posicion != -1 && posicion < listaOrdenes.size()) {
             OrdenServicio orden = listaOrdenes.get(posicion);
 
-            // ==== RecyclerView del cliente ====
             RecyclerView rvCliente = findViewById(R.id.rvDetalleCliente);
             rvCliente.setLayoutManager(new LinearLayoutManager(this));
             ArrayList<Cliente> clienteUnico = new ArrayList<>();
@@ -51,16 +50,13 @@ public class DetalleOrdenServicioActivity extends AppCompatActivity {
             ClienteAdapter clienteAdapter = new ClienteAdapter(clienteUnico, this);
             rvCliente.setAdapter(clienteAdapter);
 
-            // ==== Datos del vehículo ====
             tvTipoVehiculo.setText(String.valueOf(orden.getVehiculo().getTipoVehiculo()));
             tvPlaca.setText(orden.getVehiculo().getNumPlaca());
 
 
-            // ==== RecyclerView de los servicios ====
-            DetalleOrdenServicioAdapter adapterServicios = new DetalleOrdenServicioAdapter(orden.getListaServicios());
+            DetalleOrdenServicioAdapter adapterServicios = new DetalleOrdenServicioAdapter(orden.getListaDetalleServicios());
             rvServicios.setAdapter(adapterServicios);
 
-            // ==== Total ====
             tvTotal.setText("Total: $" + String.format("%.2f", orden.getTotal()));
 
         } else {

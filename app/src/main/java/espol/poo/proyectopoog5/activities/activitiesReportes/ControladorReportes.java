@@ -27,7 +27,7 @@ public class ControladorReportes extends AppCompatActivity {
                 String anioOrden = partes[2];
 
                 if (anioOrden.equals(anio) && mesOrden.equals(mes)) {
-                    for (DetalleServicioOS detalle : orden.getListaServicios()) {
+                    for (DetalleServicioOS detalle : orden.getListaDetalleServicios()) {
                         String nombreServicio = detalle.getServicio().getNombreServ();
                         double subtotal = detalle.getSubtotal();
 
@@ -56,7 +56,7 @@ public class ControladorReportes extends AppCompatActivity {
                 String anioOrden = partes[2];
 
                 if (anioOrden.equals(anio) && mesOrden.equals(mes)) {
-                    for (DetalleServicioOS detalle : orden.getListaServicios()) {
+                    for (DetalleServicioOS detalle : orden.getListaDetalleServicios()) {
                         Tecnico tecnico = detalle.getTecnico();
                         if (tecnico != null) {
                             String nombreTecnico = tecnico.getNombrePersona();

@@ -12,7 +12,6 @@ public class Servicio implements Serializable {
     private double precioActual;
     private List<Double> historialPrecios = new ArrayList<>();
     public static final String nomArchivoServicio = "servicio.ser";
-    //private static final long serialVersionUID = 1L;
 
 
     private static int contadorCodigo = 1;

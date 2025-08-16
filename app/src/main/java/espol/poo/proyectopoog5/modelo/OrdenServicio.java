@@ -3,13 +3,11 @@ import android.content.Context;
 import android.util.Log;
 
 import java.io.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class OrdenServicio implements Serializable {
     private Cliente cliente;
     private Vehiculo vehiculo;
-    //private String placaVehiculo;  //la placa esta incluida en la clase vehiculo
     private String fecha;  //formtato dd-mm-yyyy
     private ArrayList<DetalleServicioOS> listaServicios = new ArrayList<>();
     private double total;
@@ -19,16 +17,14 @@ public class OrdenServicio implements Serializable {
     public OrdenServicio(Cliente cliente, Vehiculo vehiculo, String fecha) {
         this.cliente = cliente;
         this.vehiculo = vehiculo;
-        //this.placaVehiculo = placaVehiculo;
         this.fecha = fecha;
         this.total = 0;
     }
 
     public Cliente getCliente() {return cliente;}
     public Vehiculo getVehiculo() {return vehiculo;}
-    //public String getPlacaVehiculo() {return placaVehiculo;}
     public String getFecha() {return fecha;}
-    public ArrayList<DetalleServicioOS> getListaServicios() {return listaServicios;}
+    public ArrayList<DetalleServicioOS> getListaDetalleServicios() {return listaServicios;}
     public double getTotal() {return total;}
 
     public void agregarDetalle(DetalleServicioOS detalle) {
@@ -119,7 +115,7 @@ public class OrdenServicio implements Serializable {
                 int anioOrden = Integer.parseInt(partesFecha[2]);
 
                 if (mesOrden == mes && anioOrden == anio) {
-                    for (DetalleServicioOS detalle : orden.getListaServicios()) {
+                    for (DetalleServicioOS detalle : orden.getListaDetalleServicios()) {
                         String nombreServicio = detalle.getServicio().getNombreServ();
                         double subtotal = detalle.getSubtotal();
                         totalesPorServicio.put(nombreServicio,

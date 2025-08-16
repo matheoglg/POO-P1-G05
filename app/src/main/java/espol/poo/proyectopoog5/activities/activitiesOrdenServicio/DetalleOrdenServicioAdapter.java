@@ -36,7 +36,7 @@ public class DetalleOrdenServicioAdapter extends RecyclerView.Adapter<DetalleOrd
         holder.tvSubtotal.setText("$" + String.format("%.2f", detalle.getSubtotal()));
         holder.tvTecnico.setText(detalle.getTecnico().getNombrePersona());
 
-        // Si item_servicio_os tiene botón eliminar, aquí lo ocultamos:
+        // reutiliza item servicio os pero, quita el boton
         if (holder.btnEliminar != null) {
             holder.btnEliminar.setVisibility(View.GONE);
         }
