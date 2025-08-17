@@ -15,7 +15,7 @@ import espol.poo.proyectopoog5.modelo.ReporteTecnico;
 import espol.poo.proyectopoog5.modelo.Tecnico;
 
 public class ControladorReportes extends AppCompatActivity {
-    public List<espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio> obtenerIngresosPorServicio(Context context, String anio, String mes) {
+    public List<espol.poo.proyectopoog5.modelo.ReporteServicio> obtenerIngresosPorServicio(Context context, String anio, String mes) {
         ArrayList<OrdenServicio> ordenes = OrdenServicio.cargarOrdenes(context);
         Map<String, Double> acumulado = new HashMap<>();
 
@@ -37,9 +37,9 @@ public class ControladorReportes extends AppCompatActivity {
             }
         }
 
-        List<espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio> lista = new ArrayList<>();
+        List<espol.poo.proyectopoog5.modelo.ReporteServicio> lista = new ArrayList<>();
         for (Map.Entry<String, Double> entry : acumulado.entrySet()) {
-            lista.add(new espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio(entry.getKey(), entry.getValue()));
+            lista.add(new espol.poo.proyectopoog5.modelo.ReporteServicio(entry.getKey(), entry.getValue()));
         }
         return lista;
     }

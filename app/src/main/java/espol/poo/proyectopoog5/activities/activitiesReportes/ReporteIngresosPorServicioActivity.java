@@ -5,11 +5,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 import espol.poo.proyectopoog5.R;
@@ -68,7 +66,7 @@ public class ReporteIngresosPorServicioActivity extends AppCompatActivity {
                 return;
             }
 
-            List<espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio> datos = controlador2.obtenerIngresosPorServicio(this, anio, mes);
+            List<espol.poo.proyectopoog5.modelo.ReporteServicio> datos = controlador2.obtenerIngresosPorServicio(this, anio, mes);
 
             ReporteServicioAdapter adapter = new ReporteServicioAdapter(datos);
             rvResultados2.setAdapter(adapter);

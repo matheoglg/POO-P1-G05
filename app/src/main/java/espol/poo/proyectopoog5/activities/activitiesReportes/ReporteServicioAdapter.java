@@ -13,9 +13,9 @@ import espol.poo.proyectopoog5.R;
 
 public class ReporteServicioAdapter extends RecyclerView.Adapter<ReporteServicioAdapter.ViewHolder> {
 
-    private List<espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio> lista;
+    private List<espol.poo.proyectopoog5.modelo.ReporteServicio> lista;
 
-    public ReporteServicioAdapter(List<espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio> lista) {
+    public ReporteServicioAdapter(List<espol.poo.proyectopoog5.modelo.ReporteServicio> lista) {
         this.lista = lista;
     }
 
@@ -37,7 +37,7 @@ public class ReporteServicioAdapter extends RecyclerView.Adapter<ReporteServicio
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        espol.poo.proyectopoog5.activities.activitiesReportes.ReporteServicio r = lista.get(position);
+        espol.poo.proyectopoog5.modelo.ReporteServicio r = lista.get(position);
         holder.tvNombre.setText(r.getNombreServicio());
         holder.tvTotal.setText(String.format("$ %.2f", r.getTotalRecaudado()));
     }
