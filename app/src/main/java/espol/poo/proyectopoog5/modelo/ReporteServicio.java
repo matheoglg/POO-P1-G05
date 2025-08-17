@@ -1,4 +1,4 @@
-package espol.poo.proyectopoog5.activities.activitiesReportes;
+package espol.poo.proyectopoog5.modelo;
 
 public class ReporteServicio {
     private String nombreServicio;
