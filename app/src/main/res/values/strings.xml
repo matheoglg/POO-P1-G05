@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProyectoPOOG5</string>
+    <string name="app_name">TecniTools</string>
     <string-array name="tipos_cliente">
         <item>Seleccione</item>
         <item>Personal</item>
