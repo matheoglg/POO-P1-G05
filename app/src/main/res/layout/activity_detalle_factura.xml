@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".activities.activitiesFactura.DetalleFacturaActivity">
 
     <TextView
@@ -12,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="Detalles de la Factura"
+        android:textColor="#000000"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/rvClienteDetalleFactura"
@@ -35,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Detalles de Servicio:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tx"
         app:layout_constraintTop_toBottomOf="@+id/tx" />
@@ -58,7 +62,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
+        android:backgroundTint="#D73A4B"
         android:text="Volver"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -69,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="Total a Pagar: $"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnVolverDetalleFactura"
         app:layout_constraintEnd_toEndOf="@+id/rvServicioDetalleFactura" />
@@ -79,6 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Fecha:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/rvClienteDetalleFactura"
         app:layout_constraintTop_toBottomOf="@+id/rvClienteDetalleFactura" />
@@ -98,6 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Periodo:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView54"
         app:layout_constraintTop_toBottomOf="@+id/textView54" />
@@ -115,6 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cargo fijo empresarial: $50.00"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/tvTotalDetalleFactura"
         app:layout_constraintEnd_toEndOf="@+id/tvTotalDetalleFactura" />
 </androidx.constraintlayout.widget.ConstraintLayout>

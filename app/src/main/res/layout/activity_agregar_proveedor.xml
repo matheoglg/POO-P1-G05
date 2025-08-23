@@ -4,29 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nuevo Proveedor"
-            android:textSize="24sp"
-            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="Nuevo Proveedor"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Identificación:"
             android:layout_marginTop="16dp"
-            android:textStyle="bold"/>
+            android:text="Identificación:"
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etIdProveedor"
@@ -38,9 +43,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Nombre:"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etNombre"
@@ -52,9 +58,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Teléfono:"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etTelefono"
@@ -66,9 +73,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Descripción:"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
+            android:textColor="#000000"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etDescripcion"
@@ -82,24 +90,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
             android:gravity="center"
-            android:layout_marginTop="16dp">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnVolver"
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Volver" />
+                android:backgroundTint="#D73A4B"
+                android:text="Volver"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnGuardar"
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#D73A4B"
                 android:onClick="guardar"
-                android:text="Guardar" />
+                android:text="Guardar"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF" />
         </LinearLayout>
 
     </LinearLayout>

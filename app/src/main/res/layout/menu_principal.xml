@@ -5,7 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:backgroundTint="#FFFFFF"
     tools:context=".activities.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,204 +18,322 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="#D93A4D"
+            android:backgroundTintMode="add"
+            android:fontFamily="@font/alfa_slab_one"
             android:gravity="center"
             android:text="TECNITOOLS"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textColor="#FFFFFF"
+            android:textColorLink="#673AB7"
+            android:textSize="24sp"
+            android:typeface="normal" />
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:columnCount="3"
-            android:rowCount="3"
             android:alignmentMode="alignMargins"
-            android:padding="8dp">
+            android:columnCount="3"
+            android:padding="8dp"
+            android:rowCount="3">
 
-            <LinearLayout
+            <!-- Celda 1 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnAdministrarClientes"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#CA3847"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Administrar Clientes" />
-            </LinearLayout>
-            <LinearLayout
+                    <ImageButton
+                        android:id="@+id/btnAdministrarClientes"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Administrar Clientes"
+                        android:textColor="#FFFFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Celda 2 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnAdministrarProveedores"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_call" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#C53845"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Administrar Proveedores" />
-            </LinearLayout>
-            <LinearLayout
+                    <ImageButton
+                        android:id="@+id/btnAdministrarProveedores"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_menu_call" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Administrar Proveedores"
+                        android:textColor="#FFFFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Celda 3 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnAdministrarTecnicos"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_manage" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#CA3847"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Administrar Técnicos" />
-            </LinearLayout>
-            <LinearLayout
+                    <ImageButton
+                        android:id="@+id/btnAdministrarTecnicos"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Administrar Técnicos"
+                        android:textColor="#FFFFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Celda 4 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnAdministrarServicios"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_edit" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#C53845"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Administrar Servicios" />
-            </LinearLayout>
-            <LinearLayout
+                    <ImageButton
+                        android:id="@+id/btnAdministrarServicios"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Administrar Servicios"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Celda 5 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnGenerarOrden"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_today" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#CA3847"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Generar Orden de Servicios" />
-            </LinearLayout>
-            <LinearLayout
+                    <ImageButton
+                        android:id="@+id/btnGenerarOrden"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_menu_today" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Generar Orden de Servicios"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Celda 6 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnGenerarFactura"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_directions" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#C53845"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Generar Facturas a Empresa" />
-            </LinearLayout>
-            <LinearLayout
+                    <ImageButton
+                        android:id="@+id/btnGenerarFactura"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_menu_directions" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Generar Facturas a Empresa"
+                        android:textColor="#FFFFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Celda 7 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnReporteServicios"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_search_category_default" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#D73A4B"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Reporte Ingresos por Servicio" />
-            </LinearLayout>
-            <LinearLayout
+                    <ImageButton
+                        android:id="@+id/btnReporteServicios"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_search_category_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Reporte Ingresos por Servicio"
+                        android:textColor="#FDFDFD"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Celda 8 -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="2dp">
 
-                <ImageButton
-                    android:id="@+id/btnReporteTecnicos"
-                    android:layout_width="59dp"
-                    android:layout_height="76dp"
-                    android:background="@null"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#CF3948"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top"
-                    android:text="Reporte Atenciones por Técnico" />
-            </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/btnReporteTecnicos"
+                        android:layout_width="59dp"
+                        android:layout_height="76dp"
+                        android:background="#FFFFFF"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="Reporte Atenciones por Técnico"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </GridLayout>
 
@@ -220,9 +341,11 @@
             android:id="@+id/btnSalir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#E23A4F"
             android:text="Salir del Programa"
-            android:layout_marginTop="16dp"/>
-
+            android:textColor="#FDFDFD"
+            android:textColorLink="#FFFFFF" />
 
     </LinearLayout>
 

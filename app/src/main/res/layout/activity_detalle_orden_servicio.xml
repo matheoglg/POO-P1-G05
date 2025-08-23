@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".activities.activitiesOrdenServicio.DetalleOrdenServicioActivity">
 
     <TextView
@@ -14,7 +15,9 @@
         android:layout_marginStart="133dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="133dp"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="Detalles de la Orden"
+        android:textColor="#000000"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +31,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#D73A4B"
         android:text="Volver"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -40,6 +46,7 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="10dp"
         android:text="Detalles del Cliente:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -62,6 +69,7 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="30dp"
         android:text="Detalles del Vehiculo: "
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvDetalleCliente" />
@@ -73,6 +81,7 @@
         android:layout_marginStart="75dp"
         android:layout_marginTop="15dp"
         android:text="Tipo: "
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
@@ -92,6 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Placa:"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textView26"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
@@ -111,6 +121,7 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="30dp"
         android:text="Detalles de Servicios:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
@@ -136,6 +147,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="15dp"
         android:text="Toal: $"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnVolverDetalleOS"
         app:layout_constraintEnd_toEndOf="parent"

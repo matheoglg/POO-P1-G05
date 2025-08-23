@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".activities.activitiesFactura.AgregarFactura">
 
     <TextView
@@ -12,7 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="Generación de Factura"
+        android:textColor="#000000"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,14 +29,15 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:text="Seleccionar Empresa:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <Spinner
         android:id="@+id/spnClienteEmpresarial"
-        android:layout_width="380dp"
-        android:layout_height="48dp"
+        android:layout_width="335dp"
+        android:layout_height="57dp"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +50,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:text="Año"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView50" />
@@ -56,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Mes"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView47"
         app:layout_constraintTop_toBottomOf="@+id/textView47" />
@@ -85,7 +91,10 @@
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_marginEnd="25dp"
+        android:backgroundTint="#D73A4B"
         android:text="Cancelar y Regresar"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnGuardarFactura" />
 
@@ -95,7 +104,10 @@
         android:layout_height="60dp"
         android:layout_marginStart="25dp"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#C9374E"
         android:text="Guardar"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -106,6 +118,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:text="Periodo:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnClienteEmpresarial" />
@@ -116,6 +129,7 @@
         android:layout_height="37dp"
         android:layout_marginTop="30dp"
         android:text="Fecha de creación:"
+        android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView50"
         app:layout_constraintTop_toBottomOf="@+id/spnMesEmpresarial" />

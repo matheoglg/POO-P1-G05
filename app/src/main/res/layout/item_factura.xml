@@ -5,6 +5,7 @@
     android:layout_width="360dp"
     android:layout_height="160dp"
     android:layout_margin="8dp"
+    android:background="#FFFFFF"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp">
 
@@ -104,6 +105,8 @@
             android:id="@+id/btnDetalleEmpresarial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Más detalles" />
+            android:backgroundTint="#BF364A"
+            android:text="Más detalles"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
