@@ -83,6 +83,7 @@
             android:id="@+id/btnEditarServicio"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#BF364A"
             android:text="Editar" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
